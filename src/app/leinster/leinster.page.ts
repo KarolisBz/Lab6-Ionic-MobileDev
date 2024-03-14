@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RouterLinkWithHref } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-leinster',
@@ -13,7 +14,12 @@ import { RouterLinkWithHref } from '@angular/router';
 })
 export class LeinsterPage implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
+
+  openCounties()
+  {
+    this.router.navigate(['/leinster-counties'])
+  }
 
   ngOnInit() {
   }

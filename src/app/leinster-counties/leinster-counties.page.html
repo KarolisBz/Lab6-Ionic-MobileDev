@@ -2,7 +2,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"></ion-back-button>
+      <ion-back-button defaultHref="/leinster"></ion-back-button>
     </ion-buttons>
     <ion-title>Leinster-Counties</ion-title>
   </ion-toolbar>
@@ -14,11 +14,17 @@
       <ion-title size="large">Leinster-Counties</ion-title>
     </ion-toolbar>
   </ion-header>
-  
+
   <!--dynamic-->
   <ul>
     <li *ngFor="let countie of counties">
       {{countie}}
     </li>
+  </ul>
+
+  <ul>
+    @for (county of counties; track counties) {
+      <li>{{county}}</li>
+    }
   </ul>
 </ion-content>
